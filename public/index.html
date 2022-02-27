@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Broadcast</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src='index.js'></script>
+    </head>
+    <body>
+        <div id="preBroadCasting">
+            <button id='my-button'>Start broadcasting</button>
+        </div>
+        <div id="broadCasting" style="visibility: hidden">
+            <h2>Started streaming...</h2>
+            <audio controls autoplay id='audio'></audio>
+            <h3 id="countLabel">Current listener: 0</h3>
+            <h4>To stop broadcasting, just close the server or the web broser.</h4>
+        </div>
+    </body>
+</html>

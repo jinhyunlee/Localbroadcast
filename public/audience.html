@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Broadcast</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src='audience.js'></script>
+    </head>
+    <body>
+        <h2 id="title">Seattle Hansarang Church Sermon</h2>
+        <div id="preBroadCasting">
+            <h4>The translation has not started yet. <br/>
+                Please wait and you will see a button to start listening when the sermon starts.</h4>
+        </div>
+        <div id="readyToListen" style="visibility: hidden">
+            <h4>Press play to listen to the translator.</h4>
+            <audio controls autoplay id='audio'></audio>
+            <h4>You can stop by pausing the player or closing the browser.</h4>
+            <h4>You should be able to use your phone to do other things as long as the browser is not closed. (depends on phones)</h4>
+        </div>
+    </body>
+</html>
