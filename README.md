@@ -1,4 +1,10 @@
 # Localbroadcast
+
+install homebrew
+download git
+$ brew install git
+
+
 Broadcast without internet (LAN)
 
 You just need node.js (and yarn add express body-parser wrtc) (or yarn install)
