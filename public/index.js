@@ -3,11 +3,18 @@ window.onload = () => {
 
     // Upon on button click.
     document.getElementById('my-button').onclick = () => {
-        // Initialize and remove the button.
         init();
-        document.getElementById('preBroadCasting').remove();
-        document.getElementById('broadCasting').style.visibility = "visible";
     }
+
+    // Upon on button click.
+    document.getElementById('refresh').onclick = () => {
+        refreshPage();
+    }
+}
+
+function removeVisibility() {
+    document.getElementById('preBroadCasting').remove();
+    document.getElementById('broadCasting').style.visibility = "visible";
 }
 
 async function init() {
@@ -31,6 +38,11 @@ function createPeer() {
     return peer;
 }
 
+async function refreshPage() {
+    await axios.post('/refresh');
+    location.reload(true);
+}
+
 async function getCount() {
     const {data} = await axios.get('/count');
     
@@ -46,6 +58,9 @@ async function handleNegotiationNeededEvent(peer) {
     };
 
     const { data } = await axios.post('/broadcast', payload);
+    if (data.sdp) {
+        removeVisibility();
+    }
     const desc = new RTCSessionDescription(data.sdp);
     peer.setRemoteDescription(desc).catch(e => console.log(e));
 }
