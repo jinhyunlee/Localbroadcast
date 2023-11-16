@@ -24,3 +24,8 @@ https://www.imss.caltech.edu/services/wired-wireless-remote-access/wired-network
 IF internet doesn't work, go to System Preference -> Network -> Advanced... -> TCP/IP -> Configure IPV4 to "Using DHCP"
 
 If you want to make sure IP address stay the same, do the same thing but just have it to "Using DHCP with manual address"
+
+## Pushing to here:
+https://stackoverflow.com/questions/69979522/fatal-authentication-failed-for-when-pushing-to-github-from-visual-studio-cod
+
+Get PAT -> use this as password
