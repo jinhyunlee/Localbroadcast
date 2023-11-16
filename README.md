@@ -17,3 +17,10 @@ you might need to run `yarn install` first.
 and then just run `node server.js`
 
 just internal use only
+
+## Internet not working / IP address changes
+https://www.imss.caltech.edu/services/wired-wireless-remote-access/wired-network/static-ip-for-mac-osx
+
+IF internet doesn't work, go to System Preference -> Network -> Advanced... -> TCP/IP -> Configure IPV4 to "Using DHCP"
+
+If you want to make sure IP address stay the same, do the same thing but just have it to "Using DHCP with manual address"
